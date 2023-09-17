@@ -6,6 +6,7 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
+int Mystring::dtorCalled = 0;
 
 Mystring::Mystring()
 {
@@ -38,8 +39,11 @@ Mystring::Mystring(const Mystring &source) : lengthM(source.lengthM), charsM(new
 
 Mystring::~Mystring()
 {
+
+  dtorCalled += 1;
+
   delete[] charsM;
-  cout << "\ndestructor is called. ";
+  cout << "\ndestructor is called. " << dtorCalled;
 }
 
 int Mystring::length() const

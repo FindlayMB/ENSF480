@@ -18,6 +18,9 @@ public:
     // Constructor with 2 parameters
     // PROMISES: Creates a Point object with x = a and y = b
 
+    Point(const Point &source);
+    // Copy constructor
+
     const double get_x() const;
     // X getter
     // PROMISES: The value of x as a double

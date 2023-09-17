@@ -11,6 +11,11 @@ Point::Point(const double a, const double b)
     this->x = a;
     this->y = b;
 }
+Point::Point(const Point &source)
+{
+    this->x = source.x;
+    this->y = source.y;
+}
 
 const double Point::get_x() const
 { // X getter

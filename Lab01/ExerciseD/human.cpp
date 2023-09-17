@@ -21,6 +21,25 @@ Human::~Human() // Destructor
     delete[] this->name;
 }
 
+Human::Human(const Human &source)
+    : location(source.location)
+{
+    this->name = new char[strlen(source.name) + 1];
+    strcpy(this->name, source.name);
+}
+
+Human &Human::operator=(const Human &source)
+{
+    if (this == &source)
+        return *this;
+    delete[] this->name;
+    this->name = new char[strlen(source.name) + 1];
+    strcpy(this->name, source.name);
+    this->location = source.get_point();
+
+    return *this;
+}
+
 const char *Human::get_name() const
 {
     return this->name;
