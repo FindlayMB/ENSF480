@@ -21,24 +21,20 @@ public:
     Point(const Point &source);
     // Copy constructor
 
-    const double get_x() const;
-    // X getter
+    const double get_x() const; // X getter
     // PROMISES: The value of x as a double
 
-    const double get_y() const;
-    // Y getter
+    const double get_y() const; // Y getter
     // PROMISES: The value of y as a double
 
-    void set_x(const double a);
-    // X setter
+    void set_x(const double a); // X setter
     // REQUIRES: a to be a double
 
-    void set_y(const double b);
-    // Y setter
+    void set_y(const double b); // Y setter
     // REQUIRES: b to be a double
 
-    void set_point(const double a, const double b);
-    // Point setter
+    void set_point(const double a, const double b); // Point setter
+    // REQUIRES: a & b to be doubles
 };
 
 #endif

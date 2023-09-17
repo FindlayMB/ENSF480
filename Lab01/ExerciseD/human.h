@@ -28,8 +28,7 @@ public:
 
     ~Human();
     // Destructor
-    // Destroys dynamically allocated char array that is
-    // pointed to by name.
+    // Destroys dynamically allocated char array that is pointed to by name.
 
     Human(const Human &source);
     // Copy constructor
@@ -50,6 +49,8 @@ public:
     // REQUIRES: name to point to a char array
 
     const Point get_point() const; // Location getter
+    // PROMISES:
+    //   Returns the Point-object location
 
     void set_point(const double x, const double y);
     // Sets both x and y of location based on the values of the arguments
