@@ -9,6 +9,8 @@
 #include <iostream>
 using namespace std;
 
+string test = "hello";
+
 Human::Human(const char *name, const double x, const double y)
     : location(x, y)
 {

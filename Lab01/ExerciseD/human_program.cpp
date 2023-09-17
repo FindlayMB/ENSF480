@@ -19,7 +19,8 @@
 int main(int argc, char **argv)
 {
     double x = 2000, y = 3000;
-    Human h("Ken Lai", x, y);
+    char *n = "Dave Bob";
+    Human h(n, x, y);
     Human h2;
     h2 = h;
     h2.display();

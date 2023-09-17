@@ -36,6 +36,9 @@ public:
     void set_y(const double b);
     // Y setter
     // REQUIRES: b to be a double
+
+    void set_point(const double a, const double b);
+    // Point setter
 };
 
 #endif

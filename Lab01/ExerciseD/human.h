@@ -12,7 +12,6 @@
 class Human
 {
 
-    // CAN WE CHANGE PROTECTED TO PRIVATE
 private:
     Point location; // Location of an object of Human on a Cartisian Plain
     char *name;     // A pointer that points to the start of a char array
@@ -20,6 +19,12 @@ private:
 public:
     Human(const char *name = "", const double x = 0, const double y = 0);
     // Constructor
+    // REQUIRES:
+    //      x and y to be doubles if included as arguments.
+    //      name points to first char of a built-in string.
+    // PROMISES:
+    //      Human object is created by copying chars from name and
+    //      creating a Point object to store the human's location
 
     ~Human();
     // Destructor
@@ -31,13 +36,18 @@ public:
 
     Human &operator=(const Human &source);
     // Assignment operator
+    // REQUIRES: source is a reference to a Human object
+    // PROMISES: to make this-object (object that this is pointing to)
+    //           as a copy of source.
 
     const char *get_name() const; // Name getter
     // PROMISES:
     //   Return value points to first char in built-in string
     //   containing the chars of the string object.
 
-    void set_name(const char *name); // Name setter
+    void set_name(const char *name);
+    // Name setter
+    // REQUIRES: name to point to a char array
 
     const Point get_point() const; // Location getter
 

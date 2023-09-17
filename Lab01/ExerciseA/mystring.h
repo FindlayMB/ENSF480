@@ -52,7 +52,7 @@ public:
 
   // PROMISES: extends the size of charsM to allow concatenate other.charsM to
   //           to the end of charsM. For example if charsM points to "ABC", and
-  //          other.charsM points to XYZ, extends charsM to "ABCXYZ".
+  //           other.charsM points to XYZ, extends charsM to "ABCXYZ".
   //
 
   void set_str(const char *s);
