@@ -1,0 +1,33 @@
+/*
+ * File Name: point.cpp
+ * Assignment: Lab 1 Exercise D
+ * Completed by: Findlay Brown, David Rodriguez
+ * Submission Date: Sept 20, 2023
+ */
+#include "point.h"
+
+Point::Point(const double a, const double b)
+{
+    this->x = a;
+    this->y = b;
+}
+
+const double Point::get_x() const
+{ // X getter
+    return this->x;
+}
+
+void Point::set_x(const double a)
+{ // X setter
+    this->x = a;
+}
+
+const double Point::get_y() const
+{ // Y getter
+    return this->y;
+}
+
+void Point::set_y(const double b)
+{ // Y setter
+    this->y = b;
+}

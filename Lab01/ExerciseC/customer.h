@@ -1,0 +1,28 @@
+/*
+ * File Name: customer.h
+ * Assignment: Lab 1 Exercise C
+ * Completed by: Findlay Brown, David Rodriguez
+ * Submission Date: Sept 20, 2023
+ */
+#ifndef CUSTOMER
+#define CUSTOMER
+
+#include <string>
+#include "address.h"
+using namespace std;
+
+class Customer
+{
+private:
+    string name;
+
+    Address address;
+
+    string phoneNumber;
+
+public:
+    Customer();  // ctor
+    ~Customer(); // dtor
+};
+
+#endif
