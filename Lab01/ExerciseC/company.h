@@ -30,11 +30,7 @@ private:
     vector<Customer> customers;
 
 public:
-    Company();  // ctor
-    ~Company(); // dtor
-    const string getCompanyName() const;
-    const string getDateEstablished() const;
-    const string getCompanyName() const;
+    // Functions
 };
 
 #endif

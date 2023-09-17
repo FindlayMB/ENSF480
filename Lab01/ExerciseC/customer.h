@@ -21,8 +21,7 @@ private:
     string phoneNumber;
 
 public:
-    Customer();  // ctor
-    ~Customer(); // dtor
+    // Functions
 };
 
 #endif

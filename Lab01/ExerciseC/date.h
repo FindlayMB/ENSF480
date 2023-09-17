@@ -15,17 +15,7 @@ private:
     int year;
 
 public:
-    Date();  // ctor
-    ~Date(); // dtor
-
-    const int getDay() const;
-    void setDay(int day);
-
-    const int getMonth() const;
-    void setMonth(int month);
-
-    const int getYear() const;
-    void setYear(int year);
+    // Functions
 };
 
 #endif

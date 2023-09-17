@@ -27,11 +27,10 @@ private:
     string dateOfBirth;
     State employmentStatus;
 
-    // string ToString(State employmentStatus);
+    string ToString(State employmentStatus);
 
 public:
-    Employee();  // ctor
-    ~Employee(); // dtor
+    // Functions
     // string getStatus();
 };
 

@@ -20,8 +20,7 @@ private:
     string country;
 
 public:
-    Address();  // ctor
-    ~Address(); // dtor
+    // Functions
 };
 
 #endif
