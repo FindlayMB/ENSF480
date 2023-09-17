@@ -31,7 +31,6 @@ private:
 
 public:
     // Functions
-    // string getStatus();
 };
 
 #endif
