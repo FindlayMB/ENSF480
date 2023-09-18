@@ -28,7 +28,7 @@ class Employee
         string dateOfBirth;
         State employmentStatus;
 
-        string toString(State employmentStatus);
+        string ToString(State employmentStatus);
 
     public:
         // Functions

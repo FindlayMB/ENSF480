@@ -3,9 +3,9 @@
 
 #include <assert.h>
 #include <iostream>
-// #include "dictionaryList.h"
-#include "dictionaryList.cpp"
-#include "mystring_B.cpp"
+#include "dictionaryList.h"
+// #include "dictionaryList.cpp"
+// #include "mystring_B.cpp"
 
 using namespace std;
 
