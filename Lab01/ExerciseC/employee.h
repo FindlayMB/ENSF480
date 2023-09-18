@@ -17,7 +17,7 @@ class Employee
 private:
     enum State
     {
-        active,
+        active = 0,
         suspended,
         retired,
         fired
@@ -27,7 +27,7 @@ private:
     string dateOfBirth;
     State employmentStatus;
 
-    string ToString(State employmentStatus);
+    string toString(State employmentStatus);
 
 public:
     // Functions

@@ -2,7 +2,7 @@
 
 // ENSF 480 - Lab 2 - Exercise A
 
-// Completed by:
+// Completed by: Findlay Brown, David Rodriguez
 
 #include <assert.h>
 #include <iostream>
@@ -214,7 +214,7 @@ void DictionaryList::copy(const DictionaryList &source)
   tempNode->nextM = NULL;
   if (source.cursorM == NULL)
   {
-    this->cursorM = 0;
+    this->cursorM = NULL;
   }
   else
   {
