@@ -38,7 +38,7 @@ void Point::set_y(const double b)
 }
 
 void Point::set_point(const double a, const double b)
-{
+{ // Point setter
     this->x = a;
     this->y = b;
 }

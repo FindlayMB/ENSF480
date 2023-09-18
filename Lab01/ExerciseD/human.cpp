@@ -1,6 +1,7 @@
 /*
  * File Name: human.cpp
  * Assignment: Lab 1 Exercise D
+ * Lab Section: B02
  * Completed by: Findlay Brown, David Rodriguez
  * Submission Date: Sept 20, 2023
  */
@@ -10,9 +11,9 @@
 using namespace std;
 
 Human::Human(const char *name, const double x, const double y)
-    : location(x, y)
+    : location(x, y), name(new char[strlen(name) + 1])
 {
-    this->name = new char[strlen(name) + 1];
+    // this->name = new char[strlen(name) + 1];
     strcpy(this->name, name);
 }
 
@@ -22,9 +23,9 @@ Human::~Human() // Destructor
 }
 
 Human::Human(const Human &source)
-    : location(source.location)
+    : location(source.location), name(new char[strlen(source.name) + 1])
 {
-    this->name = new char[strlen(source.name) + 1];
+    // this->name = new char[strlen(source.name) + 1];
     strcpy(this->name, source.name);
 }
 
