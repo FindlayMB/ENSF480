@@ -1,6 +1,7 @@
 /*
  * File Name: human_program.cpp
  * Assignment: Lab 1 Exercise D
+ * Lab Section: B02
  * Completed by: Findlay Brown, David Rodriguez
  * Submission Date: Sept 20, 2023
  */
