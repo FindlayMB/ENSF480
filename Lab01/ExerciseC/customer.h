@@ -1,6 +1,7 @@
 /*
  * File Name: customer.h
  * Assignment: Lab 1 Exercise C
+ * Lab Section: B02
  * Completed by: Findlay Brown, David Rodriguez
  * Submission Date: Sept 20, 2023
  */
@@ -13,15 +14,15 @@ using namespace std;
 
 class Customer
 {
-private:
-    string name;
+    private:
+        string name;
 
-    Address address;
+        Address address;
 
-    string phoneNumber;
+        string phoneNumber;
 
-public:
-    // Functions
+    public:
+        // Functions
 };
 
 #endif

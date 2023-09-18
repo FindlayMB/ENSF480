@@ -18,19 +18,19 @@ using namespace std;
 
 class Company
 {
-private:
-    string companyName;
+    private:
+        string companyName;
 
-    Address companyAddress;
+        Address companyAddress;
 
-    Date dateEstablished;
+        Date dateEstablished;
 
-    vector<Employee> employees;
+        vector<Employee> employees;
 
-    vector<Customer> customers;
+        vector<Customer> customers;
 
-public:
-    // Functions
+    public:
+        // Functions
 };
 
 #endif
