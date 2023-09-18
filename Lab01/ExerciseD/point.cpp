@@ -19,27 +19,27 @@ Point::Point(const Point &source)
 }
 
 const double Point::get_x() const
-{ // X getter
+{
     return this->x;
 }
 
 void Point::set_x(const double a)
-{ // X setter
+{
     this->x = a;
 }
 
 const double Point::get_y() const
-{ // Y getter
+{
     return this->y;
 }
 
 void Point::set_y(const double b)
-{ // Y setter
+{
     this->y = b;
 }
 
 void Point::set_point(const double a, const double b)
-{ // Point setter
+{
     this->x = a;
     this->y = b;
 }

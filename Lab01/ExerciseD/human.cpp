@@ -25,7 +25,6 @@ Human::~Human() // Destructor
 Human::Human(const Human &source)
     : location(source.location), name(new char[strlen(source.name) + 1])
 {
-    // this->name = new char[strlen(source.name) + 1];
     strcpy(this->name, source.name);
 }
 
