@@ -14,15 +14,15 @@ using namespace std;
 
 class Customer
 {
-    private:
-        string name;
+private:
+    string name;
 
-        Address address;
+    Address address;
 
-        string phoneNumber;
+    string phoneNumber;
 
-    public:
-        // Functions
+public:
+    // Functions
 };
 
 #endif

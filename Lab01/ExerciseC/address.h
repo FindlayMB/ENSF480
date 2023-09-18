@@ -14,14 +14,14 @@ using namespace std;
 class Address
 {
 
-    private:
-        string street;
-        string postalCode;
-        string city;
-        string country;
+private:
+    string street;
+    string postalCode;
+    string city;
+    string country;
 
-    public:
-        // Functions
+public:
+    // Functions
 };
 
 #endif

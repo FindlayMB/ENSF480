@@ -11,27 +11,26 @@
 #include <string>
 #include <vector>
 #include "date.h"
+// #include "address.h"
 using namespace std;
 
 class Employee
 {
-    private:
-        enum State
-        {
-            active = 0,
-            suspended,
-            retired,
-            fired
-        };
-        string name;
-        string address;
-        string dateOfBirth;
-        State employmentStatus;
+private:
+    enum State
+    {
+        active = 0,
+        suspended,
+        retired,
+        fired
+    };
+    string name;
+    Address address;
+    Date dateOfBirth;
+    State employmentStatus;
 
-        string ToString(State employmentStatus);
-
-    public:
-        // Functions
+public:
+    // Functions
 };
 
 #endif

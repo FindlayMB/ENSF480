@@ -10,13 +10,13 @@
 
 class Date
 {
-    private:
-        int day;
-        int month;
-        int year;
+private:
+    int day;
+    int month;
+    int year;
 
-    public:
-        // Functions
+public:
+    // Functions
 };
 
 #endif
