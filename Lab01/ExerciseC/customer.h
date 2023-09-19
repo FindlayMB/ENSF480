@@ -21,7 +21,6 @@ private:
 
     string phoneNumber;
 
-public:
     // Functions
 };
 

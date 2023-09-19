@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 #include "date.h"
-// #include "address.h"
+#include "address.h"
 using namespace std;
 
 class Employee
@@ -29,7 +29,6 @@ private:
     Date dateOfBirth;
     State employmentStatus;
 
-public:
     // Functions
 };
 

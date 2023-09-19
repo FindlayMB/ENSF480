@@ -1,5 +1,10 @@
-// exBmain.cpp
-// ENSF 480 - Lab 2 - Exercise A
+/*
+ * File Name: exBmain.cpp
+ * Assignment: Lab 1 Exercise B
+ * Lab Section: B02
+ * Completed by: Findlay Brown, David Rodriguez
+ * Submission Date: Sept 20, 2023
+ */
 
 #include <assert.h>
 #include <iostream>

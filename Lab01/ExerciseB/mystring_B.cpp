@@ -1,8 +1,11 @@
-/*  mystring_B.cpp
- *
- *
+/*
+ * File Name: mystring_B.cpp
+ * Assignment: Lab 1 Exercise B
+ * Lab Section: B02
+ * Completed by: Findlay Brown, David Rodriguez
+ * Submission Date: Sept 20, 2023
  */
-// ENSF 480 - Lab 2 - Exercise A
+
 #include "mystring_B.h"
 #include <string.h>
 #include <iostream>

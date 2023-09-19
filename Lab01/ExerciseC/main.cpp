@@ -12,7 +12,6 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     Employee *e = new Employee();
-    // cout << e->employmentStatus;
-    /* code */
+
     return 0;
 }
