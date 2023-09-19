@@ -4,6 +4,7 @@
 
 #include "mystring.h"
 #include <string.h>
+#include <assert.h>
 #include <iostream>
 using namespace std;
 int Mystring::dtorCalled = 0;
@@ -96,6 +97,37 @@ Mystring &Mystring::operator=(const Mystring &S)
 
   cout << "\nassignment operator called. ";
   return *this;
+}
+
+Mystring Mystring::operator+(const Mystring &src)
+{
+  Mystring temp = new char[this->lengthM + src.lengthM + 1];
+  temp.lengthM = this->lengthM + src.lengthM;
+  strcpy(temp.charsM, charsM);
+  strcat(temp.charsM, src.charsM);
+  return temp;
+}
+
+Mystring &Mystring::operator+=(const Mystring &src)
+{
+  this->lengthM += src.length();
+  char *temp = new char[this->lengthM + 1];
+  assert(temp != nullptr);
+  strcpy(temp, charsM);
+  strcat(temp, src.charsM);
+  delete[] charsM;
+  charsM = temp;
+  return *this;
+}
+
+ostream &operator<<(ostream &os, Mystring &s)
+{
+  os << s.charsM;
+}
+
+istream &operator>>(istream &is, Mystring &s)
+{
+  is >> s.charsM;
 }
 
 Mystring &Mystring::append(const Mystring other)

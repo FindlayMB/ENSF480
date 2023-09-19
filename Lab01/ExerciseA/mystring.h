@@ -6,6 +6,9 @@
 
 class Mystring
 {
+  friend ostream &operator<<(ostream &os, Mystring &s);
+  friend istream &operator>>(istream &is, Mystring &s);
+
 public:
   static int dtorCalled;
   Mystring();
@@ -29,6 +32,10 @@ public:
   // REQUIRES: rhs is reference to a Mystring as a source
   // PROMISES: to make this-object (object that this is pointing to,
   // as a copy of rhs.
+
+  Mystring operator+(const Mystring &src);
+
+  Mystring &operator+=(const Mystring &src);
 
   int length() const;
   // PROMISES: Return value is number of chars in charsM.
