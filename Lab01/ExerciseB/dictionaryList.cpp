@@ -213,10 +213,10 @@ void DictionaryList::copy(const DictionaryList &source)
     tempNode->nextM = new Node(tempSrcNode->keyM, tempSrcNode->datumM, NULL);
     tempNode = tempNode->nextM;
   }
-  tempNode->nextM = NULL;
-  if (source.cursorM == NULL)
+  tempNode->nextM = nullptr;
+  if (source.cursorM == nullptr)
   {
-    this->cursorM = NULL;
+    this->cursorM = nullptr;
   }
   else
   {

@@ -29,7 +29,7 @@ private:
     Date dateOfBirth;
     State employmentStatus;
 
-    // Functions
+    // public: Functions
 };
 
 #endif

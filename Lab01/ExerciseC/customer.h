@@ -21,7 +21,7 @@ private:
 
     string phoneNumber;
 
-    // Functions
+    // public: Functions
 };
 
 #endif

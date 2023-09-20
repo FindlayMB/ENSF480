@@ -30,7 +30,7 @@ private:
 
     vector<Customer> customers;
 
-    // Functions
+    // public: Functions
 };
 
 #endif

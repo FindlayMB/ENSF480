@@ -20,7 +20,7 @@ private:
     string city;
     string country;
 
-    // Functions
+    // public: Functions
 };
 
 #endif

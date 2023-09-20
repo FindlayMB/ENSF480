@@ -9,8 +9,6 @@
 #include <assert.h>
 #include <iostream>
 #include "dictionaryList.h"
-// #include "dictionaryList.cpp"
-// #include "mystring_B.cpp"
 
 using namespace std;
 
@@ -32,7 +30,7 @@ int main()
     test_copying();
 
     // Uncomment the call to test_copying when DictionaryList::copy is properly defined
-    // test_finding(dl);
+    test_finding(dl);
     // test_operator_overloading(dl);
     return 0;
 }

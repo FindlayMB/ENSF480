@@ -15,7 +15,7 @@ private:
     int month;
     int year;
 
-    // Functions
+    // public: Functions
 };
 
 #endif
