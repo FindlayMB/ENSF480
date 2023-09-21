@@ -204,13 +204,13 @@ void DictionaryList::destroy()
 void DictionaryList::copy(const DictionaryList &source)
 {
   this->sizeM = source.sizeM;
-  this->headM = new Node(source.headM->keyM, source.headM->datumM, NULL);
+  this->headM = new Node(source.headM->keyM, source.headM->datumM, nullptr);
   Node *tempSrcNode = source.headM;
   Node *tempNode = this->headM;
   while (tempSrcNode->nextM != 0)
   {
     tempSrcNode = tempSrcNode->nextM;
-    tempNode->nextM = new Node(tempSrcNode->keyM, tempSrcNode->datumM, NULL);
+    tempNode->nextM = new Node(tempSrcNode->keyM, tempSrcNode->datumM, nullptr);
     tempNode = tempNode->nextM;
   }
   tempNode->nextM = nullptr;
