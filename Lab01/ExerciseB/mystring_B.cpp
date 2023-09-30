@@ -146,6 +146,11 @@ int Mystring::isLessThan(const Mystring &s) const
   return (strcmp(charsM, s.charsM) < 0);
 }
 
+Mystring &Mystring::operator<<(ostream &lhs, const Mystring &rhs)
+{
+  
+}
+
 void Mystring::memory_check(char *s)
 {
   if (s == 0)

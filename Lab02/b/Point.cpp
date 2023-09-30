@@ -4,19 +4,18 @@
 //  Your name                         : Nimna Findlay
 //  Submission Date                   : oct 2, 2023
 
-#include <iostream>
-#include <cmath>
+
 #include "Point.h"
 
 int Point::count = 1000;
 
 Point::Point(double x, double y) : x(x), y(y), id(++count) {}
 
-int Point::getX() const {
+double Point::getX() const {
     return x;
 }
 
-int Point::getY() const {
+double Point::getY() const {
     return y;
 }
 
