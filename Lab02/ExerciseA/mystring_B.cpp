@@ -175,7 +175,7 @@ char &Mystring::operator[](int index)
   return charsM[index];
 }
 
-const char &Mystring::operator[](int index) const
+char &Mystring::operator[](int index) const
 {
   return charsM[index];
 }

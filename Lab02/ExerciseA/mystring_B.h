@@ -58,13 +58,9 @@ public:
 
   Mystring &operator+=(const Mystring &rhs);
 
-  // Mystring &operator!=(const Mystring &rhs); // NOT IMPLEMENTED
-
-  // int operator>=(const Mystring &rhs); // NOT IMPLEMENTED
-
   char &operator[](int index);
 
-  const char &operator[](int index) const;
+  char &operator[](int index) const;
 
   int length() const;
   // PROMISES: Return value is number of chars in charsM.

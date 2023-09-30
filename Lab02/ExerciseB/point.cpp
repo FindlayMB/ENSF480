@@ -10,35 +10,32 @@
 #include "point.h"
 
 int Point::count = 1;
-int Point::autoIDnum = 1000;
+int Point::autoIDnum = 1001;
 
 Point::Point(double x, double y)
+    : ID(autoIDnum)
 {
     count++;
     autoIDnum++;
     this->x = x;
     this->y = y;
-    this->id = autoIDnum;
 }
 
 Point::Point(const Point &source)
+    : ID(autoIDnum)
 {
     count++;
     autoIDnum++;
     this->x = source.x;
     this->y = source.y;
-    this->id = autoIDnum;
 }
 
 Point &Point::operator=(const Point &rhs)
 {
     if (this == &rhs)
         return *this;
-    // count++;
-    // autoIDnum++;
     this->x = rhs.x;
     this->y = rhs.y;
-    // this->id = autoIDnum;
     return *this;
 }
 
@@ -69,7 +66,7 @@ void Point::setY(double y)
 
 int Point::getId() const
 {
-    return this->id;
+    return this->ID;
 }
 
 int Point::counter()

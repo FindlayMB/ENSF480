@@ -20,7 +20,7 @@ class Point
 private:
     double x;
     double y;
-    int id;
+    const int ID;
     static int count;
     static int autoIDnum;
 
