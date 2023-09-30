@@ -1,9 +1,9 @@
 /*
  * File Name: dictionaryList.h
- * Assignment: Lab 1 Exercise B
+ * Assignment: Lab 2 Exercise A
  * Lab Section: B02
- * Completed by: Findlay Brown, David Rodriguez
- * Submission Date: Sept 20, 2023
+ * Completed by: Findlay Brown, Nimna Wijedasa
+ * Submission Date: Oct 2, 2023
  */
 
 #ifndef DICTIONARY_H
@@ -38,9 +38,7 @@ typedef Mystring Datum;
 class Node
 {
   friend class DictionaryList;
-  // friend ostream &operator<<(ostream &os, DictionaryList &dl);
   friend ostream &operator<<(ostream &os, Node &node);
-  // friend ostream &operator<<(ostream &os, Datum &s);
 
 private:
   Key keyM;
@@ -120,8 +118,8 @@ public:
   void make_empty();
   // PROMISES: size() == 0.
 
-  Datum &operator[](int index);
-  const Datum &operator[](int index) const;
+  Datum &operator[](int index) const;
+  // const Datum &operator[](int index) const;
 
 private:
   int sizeM;

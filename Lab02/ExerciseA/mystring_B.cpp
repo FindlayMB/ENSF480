@@ -1,9 +1,9 @@
 /*
  * File Name: mystring_B.cpp
- * Assignment: Lab 1 Exercise B
+ * Assignment: Lab 2 Exercise A
  * Lab Section: B02
- * Completed by: Findlay Brown, David Rodriguez
- * Submission Date: Sept 20, 2023
+ * Completed by: Findlay Brown, Nimna Wijedasa
+ * Submission Date: Oct 2, 2023
  */
 
 #include "mystring_B.h"
@@ -54,7 +54,7 @@ Mystring::~Mystring()
 
 int Mystring::length() const
 {
-  return lengthM;
+  return this->lengthM;
 }
 
 char Mystring::get_char(int pos) const
@@ -64,12 +64,12 @@ char Mystring::get_char(int pos) const
     cerr << "\nERROR: get_char: the position is out of boundary.";
   }
 
-  return charsM[pos];
+  return this->charsM[pos];
 }
 
 const char *Mystring::c_str() const
 {
-  return charsM;
+  return this->charsM;
 }
 
 void Mystring::set_char(int pos, char c)
@@ -88,30 +88,30 @@ void Mystring::set_char(int pos, char c)
     return;
   }
 
-  charsM[pos] = c;
+  this->charsM[pos] = c;
 }
 
 Mystring &Mystring::operator=(const Mystring &rhs)
 {
   if (this == &rhs)
     return *this;
-  delete[] charsM;
-  lengthM = (int)strlen(rhs.charsM);
-  charsM = new char[lengthM + 1];
-  memory_check(charsM);
-  strcpy(charsM, rhs.charsM);
+  delete[] this->charsM;
+  this->lengthM = (int)strlen(rhs.charsM);
+  this->charsM = new char[lengthM + 1];
+  memory_check(this->charsM);
+  strcpy(this->charsM, rhs.charsM);
 
   return *this;
 }
 
-// Mystring Mystring::operator+(const Mystring &rhs)
-// {
-//   Mystring temp = new char[this->lengthM + rhs.lengthM + 1];
-//   temp.lengthM = this->lengthM + rhs.lengthM;
-//   strcpy(temp.charsM, charsM);
-//   strcat(temp.charsM, rhs.charsM);
-//   return temp;
-// }
+Mystring Mystring::operator+(const Mystring &rhs)
+{
+  Mystring temp = new char[this->lengthM + rhs.lengthM + 1];
+  temp.lengthM = this->lengthM + rhs.lengthM;
+  strcpy(temp.charsM, this->charsM);
+  strcat(temp.charsM, rhs.charsM);
+  return temp;
+}
 
 Mystring &Mystring::operator+=(const Mystring &rhs)
 {
@@ -125,34 +125,34 @@ Mystring &Mystring::operator+=(const Mystring &rhs)
   return *this;
 }
 
-bool operator==(const Mystring &lhs, const Mystring &rhs)
+bool Mystring::operator==(const Mystring &rhs) const
 {
-  return strcmp(lhs.charsM, rhs.charsM) == 0;
+  return strcmp(this->charsM, rhs.charsM) == 0;
 }
 
-bool operator!=(const Mystring &lhs, const Mystring &rhs)
+bool Mystring::operator!=(const Mystring &rhs) const
 {
-  return strcmp(lhs.charsM, rhs.charsM) != 0;
+  return strcmp(this->charsM, rhs.charsM) != 0;
 }
 
-bool operator>=(const Mystring &lhs, const Mystring &rhs)
+bool Mystring::operator>=(const Mystring &rhs) const
 {
-  return strcmp(lhs.charsM, rhs.charsM) >= 0;
+  return strcmp(this->charsM, rhs.charsM) >= 0;
 }
 
-bool operator<=(const Mystring &lhs, const Mystring &rhs)
+bool Mystring::operator<=(const Mystring &rhs) const
 {
-  return strcmp(lhs.charsM, rhs.charsM) <= 0;
+  return strcmp(this->charsM, rhs.charsM) <= 0;
 }
 
-bool operator>(const Mystring &lhs, const Mystring &rhs)
+bool Mystring::operator>(const Mystring &rhs) const
 {
-  return strcmp(lhs.charsM, rhs.charsM) > 0;
+  return strcmp(this->charsM, rhs.charsM) > 0;
 }
 
-bool operator<(const Mystring &lhs, const Mystring &rhs)
+bool Mystring::operator<(const Mystring &rhs) const
 {
-  return strcmp(lhs.charsM, rhs.charsM) < 0;
+  return strcmp(this->charsM, rhs.charsM) < 0;
 }
 
 ostream &operator<<(ostream &os, Mystring &s)

@@ -1,5 +1,10 @@
-// exBmain.cpp
-// ENSF 480 - Lab 2 - Exercise A
+/*
+ * File Name: exBmain.cpp
+ * Assignment: Lab 2 Exercise A
+ * Lab Section: B02
+ * Completed by: Findlay Brown, Nimna Wijedasa
+ * Submission Date: Oct 2, 2023
+ */
 #include <assert.h>
 #include <iostream>
 #include "dictionaryList.h"
@@ -180,7 +185,7 @@ void test_operator_overloading(DictionaryList &dl)
         cout << endl
              << dl2.cursor_datum() << " is less than " << dl.cursor_datum();
 
-    if (dl.cursor_datum() != dl2.cursor_datum())
+    if (dl.cursor_datum() != (dl2.cursor_datum()))
         cout << endl
              << dl.cursor_datum() << " is not equal to " << dl2.cursor_datum();
     else
@@ -213,7 +218,9 @@ void test_operator_overloading(DictionaryList &dl)
     cout << endl
          << "The socond element of " << dl.cursor_datum() << " is: " << c;
 
+    //----------------------------------------------------------------------------------------------------
     // dl.cursor_datum()[1] = 'o';
+    //----------------------------------------------------------------------------------------------------
     c = dl.cursor_datum()[1];
     cout << endl
          << "The socond element of " << dl.cursor_datum() << " is: " << c;

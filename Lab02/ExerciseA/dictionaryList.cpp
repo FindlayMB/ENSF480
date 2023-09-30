@@ -1,9 +1,9 @@
 /*
  * File Name: dictionaryList.cpp
- * Assignment: Lab 1 Exercise B
+ * Assignment: Lab 2 Exercise A
  * Lab Section: B02
- * Completed by: Findlay Brown, David Rodriguez
- * Submission Date: Sept 20, 2023
+ * Completed by: Findlay Brown, Nimna Wijedasa
+ * Submission Date: Oct 2, 2023
  */
 
 #include <assert.h>
@@ -54,7 +54,7 @@ DictionaryList &DictionaryList::operator=(const DictionaryList &rhs)
   return *this;
 }
 
-Datum &DictionaryList::operator[](int index)
+Datum &DictionaryList::operator[](int index) const
 {
   assert(index <= sizeM);
   Node *temp = headM;
@@ -69,31 +69,37 @@ Datum &DictionaryList::operator[](int index)
   return temp->datumM;
 }
 
-const Datum &DictionaryList::operator[](int index) const
-{
-  assert(index <= sizeM);
-  Node *temp = headM;
-  for (int i = 0; i < sizeM; i++)
-  {
-    if (i == index)
-    {
-      return temp->datumM;
-    }
-    temp = temp->nextM;
-  }
-  return temp->datumM;
-}
+// const Datum &DictionaryList::operator[](int index) const
+// {
+//   assert(index <= sizeM);
+//   Node *temp = headM;
+//   for (int i = 0; i < sizeM; i++)
+//   {
+//     if (i == index)
+//     {
+//       return temp->datumM;
+//     }
+//     temp = temp->nextM;
+//   }
+//   return temp->datumM;
+// }
 
 ostream &operator<<(ostream &os, DictionaryList &dl)
 {
-  Node *tempCursor = dl.headM;
-  int i;
-  for (i = 0; i < dl.sizeM - 1; i++)
+  // return os << dl.headM;
+  dl.go_to_first();
+
+  for (int i = 0; i < dl.sizeM - 1; i++)
   {
-    os << tempCursor->getKey() << "  " << tempCursor->getMystring() << endl;
-    tempCursor = tempCursor->getNext();
+    os << "  " << dl.cursor_key() << "  " << dl.cursor_datum() << endl;
+    dl.step_fwd();
   }
-  return os << tempCursor->getKey() << "  " << tempCursor->getMystring() << endl;
+  return os << "  " << dl.cursor_key() << "  " << dl.cursor_datum() << endl;
+}
+
+ostream &operator<<(ostream &os, Node &node)
+{
+  return os << "\t" << node.keyM << "  " << node.datumM << endl;
 }
 
 DictionaryList::~DictionaryList()
@@ -117,7 +123,7 @@ const Key &DictionaryList::cursor_key() const
   return cursorM->keyM;
 }
 
-const Mystring &DictionaryList::cursor_datum() const
+const Datum &DictionaryList::cursor_datum() const
 {
   assert(cursor_ok());
   return cursorM->datumM;

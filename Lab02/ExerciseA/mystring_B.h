@@ -1,9 +1,9 @@
 /*
  * File Name: mystring_B.h
- * Assignment: Lab 1 Exercise B
+ * Assignment: Lab 2 Exercise A
  * Lab Section: B02
- * Completed by: Findlay Brown, David Rodriguez
- * Submission Date: Sept 20, 2023
+ * Completed by: Findlay Brown, Nimna Wijedasa
+ * Submission Date: Oct 2, 2023
  */
 
 #include <iostream>
@@ -18,12 +18,6 @@ class Mystring
   friend ostream &operator<<(ostream &os, const Mystring &s);
   friend ostream &operator<<(ostream &os, Mystring &s);
   friend istream &operator>>(istream &is, Mystring &s);
-  friend bool operator==(const Mystring &lhs, const Mystring &rhs);
-  friend bool operator!=(const Mystring &lhs, const Mystring &rhs);
-  friend bool operator>=(const Mystring &lhs, const Mystring &rhs);
-  friend bool operator<=(const Mystring &lhs, const Mystring &rhs);
-  friend bool operator>(const Mystring &lhs, const Mystring &rhs);
-  friend bool operator<(const Mystring &lhs, const Mystring &rhs);
 
 public:
   Mystring();
@@ -43,18 +37,30 @@ public:
 
   Mystring(const Mystring &source); // copy constructor
 
+  bool operator==(const Mystring &rhs) const;
+
+  bool operator!=(const Mystring &rhs) const;
+
+  bool operator>=(const Mystring &rhs) const;
+
+  bool operator<=(const Mystring &rhs) const;
+
+  bool operator>(const Mystring &rhs) const;
+
+  bool operator<(const Mystring &rhs) const;
+
   Mystring &operator=(const Mystring &rhs); // assignment operator
   // REQUIRES: rhs is reference to a Mystring as a source
   // PROMISES: to make this-object (object that this is pointing to, as  a copy
   //           of rhs.
 
-  // Mystring operator+(const Mystring &rhs);
+  Mystring operator+(const Mystring &rhs);
 
   Mystring &operator+=(const Mystring &rhs);
 
-  Mystring &operator!=(const Mystring &rhs);
+  // Mystring &operator!=(const Mystring &rhs); // NOT IMPLEMENTED
 
-  int operator>=(const Mystring &rhs);
+  // int operator>=(const Mystring &rhs); // NOT IMPLEMENTED
 
   char &operator[](int index);
 
@@ -79,7 +85,6 @@ public:
   // PROMISES: Character at position pos is set equal to c.
 
   Mystring &append(const Mystring &other);
-
   // PROMISES: extends the size of charsM to allow concatenate other.charsM to
   //           to the end of charsM. For example if charsM points to "ABC", and
   //          other.charsM points to XYZ, extends charsM to "ABCXYZ".
@@ -96,12 +101,16 @@ public:
   // PROMISES: retruns true if charsM is greater than s.charsM.
 
   int isGreaterOrEqual(const Mystring &s) const;
+  // REQUIRES: s refers to an object of class Mystring
+  // PROMISES: retruns true if charsM is greater than or equal to s.charsM.
 
   int isLessThan(const Mystring &s) const;
   // REQUIRES: s refers to an object of class Mystring
   // PROMISES: retruns true if charsM is less than s.charsM.
 
   int isLessOrEqual(const Mystring &s) const;
+  // REQUIRES: s refers to an object of class Mystring
+  // PROMISES: retruns true if charsM is less than or equal to s.charsM.
 
   int isEqual(const Mystring &s) const;
   // REQUIRES: s refers to an object of class Mystring
