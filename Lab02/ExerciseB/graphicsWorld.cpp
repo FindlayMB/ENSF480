@@ -86,10 +86,3 @@ void GraphicsWorld::run()
     sh[3]->display();
 #endif // end of block to test array of pointer and polymorphism
 }
-
-int main(int argc, char const *argv[])
-{
-    GraphicsWorld a;
-    a.run();
-    return 0;
-}
