@@ -69,24 +69,8 @@ Datum &DictionaryList::operator[](int index) const
   return temp->datumM;
 }
 
-// const Datum &DictionaryList::operator[](int index) const
-// {
-//   assert(index <= sizeM);
-//   Node *temp = headM;
-//   for (int i = 0; i < sizeM; i++)
-//   {
-//     if (i == index)
-//     {
-//       return temp->datumM;
-//     }
-//     temp = temp->nextM;
-//   }
-//   return temp->datumM;
-// }
-
 ostream &operator<<(ostream &os, DictionaryList &dl)
 {
-  // return os << dl.headM;
   dl.go_to_first();
 
   for (int i = 0; i < dl.sizeM - 1; i++)

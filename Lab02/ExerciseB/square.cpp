@@ -34,11 +34,11 @@ Square::Square(const Square &rhs)
 
 Square &Square::operator=(const Square &rhs)
 {
-    if (this == &rhs)
-        return *this;
-    this->side_a = rhs.side_a;
-    this->setName(rhs.shapeName);
-    this->origin = rhs.origin;
+    if (this != &rhs)
+    {
+        Shape::operator=(rhs);
+        this->side_a = rhs.side_a;
+    }
     return *this;
 }
 

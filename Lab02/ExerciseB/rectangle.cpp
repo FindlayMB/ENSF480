@@ -31,12 +31,11 @@ Rectangle::Rectangle(double x, double y, double side_a, double side_b, const cha
 
 Rectangle &Rectangle::operator=(const Rectangle &rhs)
 {
-    if (this == &rhs)
-        return *this;
-    this->side_a = rhs.side_a;
-    this->side_b = rhs.side_b;
-    this->setName(rhs.shapeName);
-    this->origin = rhs.origin;
+    if (this != &rhs)
+    {
+        Square::operator=(rhs);
+        this->side_b = rhs.side_b;
+    }
     return *this;
 }
 
