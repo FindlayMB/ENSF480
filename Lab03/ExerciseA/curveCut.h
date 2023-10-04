@@ -24,5 +24,3 @@ public:
     double area() const;
     double perimeter() const;
 };
-
-// #endif
