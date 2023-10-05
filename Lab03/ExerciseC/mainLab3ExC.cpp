@@ -1,6 +1,11 @@
 
-// ENSF 480 - Lab 3, Ex C
-// M. Moussavi
+/*
+ * File Name: mainLab3ExC.cpp
+ * Assignment: Lab 3 Exercise A
+ * Lab Section: B02
+ * Completed by: Findlay Brown, Nimna Wijedasa
+ * Submission Date: Oct 2, 2023
+ */
 
 #include <assert.h>
 #include <iostream>

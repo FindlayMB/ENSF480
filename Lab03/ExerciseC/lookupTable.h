@@ -1,5 +1,10 @@
-// LookupTable.h
-// ENSF 480 - Lab 3, Ex C
+/*
+ * File Name: lookupTable.h
+ * Assignment: Lab 3 Exercise C
+ * Lab Section: B02
+ * Completed by: Findlay Brown, Nimna Wijedasa
+ * Submission Date: Oct 2, 2023
+ */
 
 #ifndef LOOKUPTABLE_H
 #define LOOKUPTABLE_H

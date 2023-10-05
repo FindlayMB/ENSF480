@@ -1,6 +1,6 @@
 /*
  * File Name: customer.cpp
- * Assignment: Lab 3 Exercise B
+ * Assignment: Lab 3 Exercise C
  * Lab Section: B02
  * Completed by: Findlay Brown, Nimna Wijedasa
  * Submission Date: Oct 2, 2023

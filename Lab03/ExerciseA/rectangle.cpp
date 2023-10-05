@@ -18,13 +18,6 @@ Rectangle::Rectangle(double x, double y, const char *name, double side_a, double
     this->side_b = side_b;
 }
 
-Rectangle::Rectangle(const Rectangle &source)
-    : Square(source.origin, source.shapeName, source.side_a),
-      Shape(source.origin, source.shapeName)
-{
-    this->side_b = source.side_b;
-}
-
 Rectangle::Rectangle(double x, double y, double side_a, double side_b, const char *name)
     : Rectangle(x, y, name, side_a, side_b)
 {
@@ -44,12 +37,19 @@ Rectangle::Rectangle(Point origin, const char *name, double side_a, double side_
     this->side_b = side_b;
 }
 
+Rectangle::Rectangle(const Rectangle &source)
+    : Square(source),
+      Shape(source)
+{
+    this->side_b = source.side_b;
+}
+
 Rectangle &Rectangle::operator=(const Rectangle &rhs)
 {
     if (this != &rhs)
     {
-        Square::operator=(rhs);
         this->side_b = rhs.side_b;
+        Square::operator=(rhs);
     }
     return *this;
 }

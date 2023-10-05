@@ -17,19 +17,15 @@ CurveCut::CurveCut(double x, double y, const char *name, double side_a, double s
 }
 
 CurveCut::CurveCut(double x, double y, double side_a, double side_b, double radius, const char *name)
-    : Circle(x, y, name, radius),
-      Rectangle(x, y, name, side_a, side_b),
-      Square(x, y, name, side_a),
-      Shape(x, y, name)
+    : CurveCut(x, y, name, side_a, side_b, radius)
 {
-    assert(radius <= (side_a > side_b ? side_b : side_a));
 }
 
 CurveCut::CurveCut(const CurveCut &source)
-    : Circle(source.origin, source.shapeName, source.radius),
-      Rectangle(source.origin, source.shapeName, source.side_a, source.side_b),
-      Square(source.origin, source.shapeName, source.side_a),
-      Shape(source.origin, source.shapeName)
+    : Circle(source),
+      Rectangle(source),
+      Square(source),
+      Shape(source)
 {
 }
 

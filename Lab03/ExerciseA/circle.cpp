@@ -30,7 +30,7 @@ Circle::Circle(Point origin, double radius, const char *name)
 }
 
 Circle::Circle(const Circle &source)
-    : Shape(source.origin, source.shapeName)
+    : Shape(source)
 {
     this->radius = source.radius;
 }
@@ -60,8 +60,6 @@ void Circle::display() const
     std::cout << "Circle Name:\t" << this->shapeName << std::endl;
     origin.display();
     std::cout << "Radius:\t\t" << this->radius << std::endl;
-    std::cout << "Area:\t\t" << area() << std::endl;
-    std::cout << "Perimeter:\t" << perimeter() << std::endl;
 }
 
 double Circle::area() const

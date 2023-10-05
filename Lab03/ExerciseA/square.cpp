@@ -26,10 +26,10 @@ Square::Square(Point p, const char *name, double side_a)
 {
     this->side_a = side_a;
 }
-Square::Square(const Square &rhs)
-    : Shape(rhs.origin, rhs.shapeName)
+Square::Square(const Square &source)
+    : Shape(source)
 {
-    this->side_a = rhs.side_a;
+    this->side_a = source.side_a;
 }
 
 Square &Square::operator=(const Square &rhs)

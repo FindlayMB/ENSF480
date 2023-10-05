@@ -42,7 +42,7 @@ void GraphicsWorld::run()
     Rectangle rec2(3, 4, 11, 7, "RECTANGLE rec2");
     rec2.display();
     rec2 = a;
-    a.setSideA(200);
+    a.setSideB(200);
     a.setSideA(100);
     cout << "\nExpected to display the following values for object rec2: " << endl;
     cout << "Rectangle Name:\tRECTANGLE A\n"
@@ -96,7 +96,7 @@ void GraphicsWorld::run()
     cout << "\nThe distance between rectangle a and circle c is: " << d << endl;
     CurveCut rc(6, 5, 10, 12, 9, "CurveCut rc");
     rc.display();
-    cout << "the area of " << rc.getName() << " is: " << rc.area() << endl;
+    cout << "\nthe area of " << rc.getName() << " is: " << rc.area() << endl;
     cout << "the perimeter of " << rc.getName() << " is: " << rc.perimeter() << endl;
     d = rc.distance(c);
     cout << "\nThe distance between rc and c is: " << d << endl;
@@ -107,16 +107,16 @@ void GraphicsWorld::run()
     sh[2] = &c;
     sh[3] = &rc;
     sh[0]->display();
-    cout << "\nthe area of " << sh[0]->getName() << "is: " << sh[0]->area();
-    cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[0]->perimeter();
+    cout << "\nthe area of " << sh[0]->getName() << " is: " << sh[0]->area();
+    cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[0]->perimeter() << "\n";
     sh[1]->display();
     cout << "\nthe area of " << sh[1]->getName() << "is: " << sh[1]->area();
-    cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[1]->perimeter();
+    cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[1]->perimeter() << "\n";
     sh[2]->display();
-    cout << "\nthe area of " << sh[2]->getName() << "is: " << sh[2]->area();
-    cout << "\nthe circumference of " << sh[2]->getName() << " is: " << sh[2]->perimeter();
+    cout << "\nthe area of " << sh[2]->getName() << " is: " << sh[2]->area();
+    cout << "\nthe circumference of " << sh[2]->getName() << " is: " << sh[2]->perimeter() << "\n";
     sh[3]->display();
-    cout << "\nthe area of " << sh[3]->getName() << "is: " << sh[3]->area();
+    cout << "\nthe area of " << sh[3]->getName() << " is: " << sh[3]->area();
     cout << "\nthe perimeter of " << sh[3]->getName() << " is: " << sh[3]->perimeter();
     cout << "\nTesting copy constructor in class CurveCut:" << endl;
     CurveCut cc = rc;

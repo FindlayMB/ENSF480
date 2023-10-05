@@ -25,15 +25,28 @@ private:
     static int autoIDnum;
 
 public:
+    // Constructor
     Point(double x, double y);
+
+    // Constructor Overload 1
     Point(const Point &source);
+
+    // Point Assignment operator
     Point &operator=(const Point &rhs);
+
+    // Point Destructor
     ~Point();
 
+    // x getter
     double getX() const;
+
+    // x setter
     void setX(double x);
 
+    // y getter
     double getY() const;
+
+    // y setter
     void setY(double y);
 
     int getId() const;

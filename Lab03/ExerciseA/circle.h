@@ -17,17 +17,31 @@ protected:
     double radius;
 
 public:
+    // Constructor
     Circle(double x, double y, const char *name, double radius);
+
+    // Constructor Overload 1
     Circle(double x, double y, double radius, const char *name);
+
+    // Constructor Overload 2
     Circle(Point origin, const char *name, double radius);
+
+    // Constructor Overload 3
     Circle(Point origin, double radius, const char *name);
+
+    // Circle Copy constructor
     Circle(const Circle &source);
+
+    // Circle Assignment operator
     Circle &operator=(const Circle &rhs);
 
+    // radius getter
     double getRadius() const;
+
+    // radius setter
     void setRadius(double radius);
 
-    void display() const;
-    double area() const;
-    double perimeter() const;
+    virtual void display() const;
+    virtual double area() const;
+    virtual double perimeter() const;
 };

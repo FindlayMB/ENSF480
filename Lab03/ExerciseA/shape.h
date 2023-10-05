@@ -21,22 +21,36 @@ protected:
     char *shapeName;
 
 public:
+    // Constructor
     Shape(double x, double y, const char *name);
+
+    // Constructor Overload 1
     Shape(Point origin, const char *name);
+
+    // Shape Copy constructor
     Shape(const Shape &source);
+
+    // Shape Assignment operator
     Shape &operator=(const Shape &rhs);
-    ~Shape();
 
+    // Shape Destructor
+    virtual ~Shape();
+
+    // origin getter
     const Point &getOrigin() const;
-    const char *getName() const;
-    void setName(const char *name);
 
-    virtual void display() const;
+    // name getter
+    const char *getName() const;
+
+    // name setter
+    void setName(const char *name);
 
     double distance(Shape &other);
     static double distance(Shape &shape1, Shape &shape2);
 
     void move(double dx, double dy);
+
+    virtual void display() const;
     virtual double area() const = 0;
     virtual double perimeter() const = 0;
 };

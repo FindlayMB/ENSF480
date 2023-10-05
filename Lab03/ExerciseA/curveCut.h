@@ -14,10 +14,17 @@ class CurveCut : public Circle, public Rectangle
 {
 
 public:
-    CurveCut(double x, double y, const char *name, double side_a, double side_b, double radius);
-    CurveCut(double x, double y, double side_a, double side_b, double radius, const char *name);
+    // Constructor Overload 1
+    CurveCut(double x, double y, const char *name,
+             double side_a, double side_b, double radius);
+    // Constructor Overload 2
+    CurveCut(double x, double y, double side_a,
+             double side_b, double radius, const char *name);
 
+    // CurveCut Copy constructor
     CurveCut(const CurveCut &source);
+
+    // CurveCut Assignment operator
     CurveCut &operator=(const CurveCut &rhs);
 
     void display() const;
