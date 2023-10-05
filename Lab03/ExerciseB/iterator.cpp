@@ -207,14 +207,13 @@ int main()
   // #if 0
   cout << "\nTesting an <int> Vector: " << endl;
 
-  cout << "\n\nTesting sort";
+  cout << "\n\nTesting Sort & Postfix ++";
   x.ascending_sort();
 
-  cout << "\n\nTesting Postfix ++";
   for (int i = 0; i < 3; i++)
     cout << endl
          << iter++;
-  // #if 0
+
   cout << "\n\nTesting Prefix --:";
   for (int i = 0; i < 3; i++)
     cout << endl
@@ -237,7 +236,7 @@ int main()
   y[0] = "Bar";
   y[1] = "Foo";
   y[2] = "All";
-  ;
+
   Vector<Mystring>::VectIter iters(y);
 
   cout << "\n\nTesting sort";
@@ -268,7 +267,6 @@ int main()
   z[0] = "Orange";
   z[1] = "Pear";
   z[2] = "Apple";
-  ;
 
   Vector<const char *>::VectIter iterchar(z);
 

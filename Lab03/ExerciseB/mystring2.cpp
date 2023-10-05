@@ -41,7 +41,8 @@ Mystring::Mystring(int n)
   charsM[0] = '\0';
 }
 
-Mystring::Mystring(const Mystring &source) : lengthM(source.lengthM), charsM(new char[source.lengthM + 1])
+Mystring::Mystring(const Mystring &source)
+    : lengthM(source.lengthM), charsM(new char[source.lengthM + 1])
 {
   memory_check(charsM);
   strcpy(charsM, source.charsM);
@@ -104,55 +105,9 @@ Mystring &Mystring::operator=(const Mystring &rhs)
   return *this;
 }
 
-Mystring Mystring::operator+(const Mystring &rhs)
-{
-  Mystring temp = new char[this->lengthM + rhs.lengthM + 1];
-  temp.lengthM = this->lengthM + rhs.lengthM;
-  strcpy(temp.charsM, this->charsM);
-  strcat(temp.charsM, rhs.charsM);
-  return temp;
-}
-
-Mystring &Mystring::operator+=(const Mystring &rhs)
-{
-  this->lengthM += rhs.length();
-  char *temp = new char[this->lengthM + 1];
-  assert(temp != nullptr);
-  strcpy(temp, charsM);
-  strcat(temp, rhs.charsM);
-  delete[] charsM;
-  charsM = temp;
-  return *this;
-}
-
-bool Mystring::operator==(const Mystring &rhs) const
-{
-  return strcmp(this->charsM, rhs.charsM) == 0;
-}
-
-bool Mystring::operator!=(const Mystring &rhs) const
-{
-  return strcmp(this->charsM, rhs.charsM) != 0;
-}
-
-bool Mystring::operator>=(const Mystring &rhs) const
-{
-  return strcmp(this->charsM, rhs.charsM) >= 0;
-}
-
-bool Mystring::operator<=(const Mystring &rhs) const
-{
-  return strcmp(this->charsM, rhs.charsM) <= 0;
-}
-
 bool Mystring::operator>(const Mystring &rhs) const
 {
   return strcmp(this->charsM, rhs.charsM) > 0;
-}
-
-bool Mystring::operator<(const Mystring &rhs) const
-{
-  return strcmp(this->charsM, rhs.charsM) < 0;
 }
 
 ostream &operator<<(ostream &os, Mystring &s)
@@ -163,11 +118,6 @@ ostream &operator<<(ostream &os, Mystring &s)
 ostream &operator<<(ostream &os, const Mystring &s)
 {
   return os << s.charsM;
-}
-
-istream &operator>>(istream &is, Mystring &s)
-{
-  return is >> s.charsM;
 }
 
 char &Mystring::operator[](int index)
@@ -201,36 +151,6 @@ void Mystring::set_str(char *s)
   memory_check(charsM);
 
   strcpy(charsM, s);
-}
-
-int Mystring::isNotEqual(const Mystring &s) const
-{
-  return (strcmp(charsM, s.charsM) != 0);
-}
-
-int Mystring::isEqual(const Mystring &s) const
-{
-  return (strcmp(charsM, s.charsM) == 0);
-}
-
-int Mystring::isGreaterThan(const Mystring &s) const
-{
-  return (strcmp(charsM, s.charsM) > 0);
-}
-
-int Mystring::isGreaterOrEqual(const Mystring &s) const
-{
-  return (strcmp(charsM, s.charsM) >= 0);
-}
-
-int Mystring::isLessThan(const Mystring &s) const
-{
-  return (strcmp(charsM, s.charsM) < 0);
-}
-
-int Mystring::isLessOrEqual(const Mystring &s) const
-{
-  return (strcmp(charsM, s.charsM) <= 0);
 }
 
 void Mystring::memory_check(char *s)

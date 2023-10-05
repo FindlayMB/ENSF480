@@ -17,7 +17,7 @@ class Mystring
 {
   friend ostream &operator<<(ostream &os, const Mystring &s);
   friend ostream &operator<<(ostream &os, Mystring &s);
-  friend istream &operator>>(istream &is, Mystring &s);
+  // friend istream &operator>>(istream &is, Mystring &s);
 
 public:
   Mystring();
@@ -37,26 +37,14 @@ public:
 
   Mystring(const Mystring &source); // copy constructor
 
-  bool operator==(const Mystring &rhs) const;
-
-  bool operator!=(const Mystring &rhs) const;
-
-  bool operator>=(const Mystring &rhs) const;
-
-  bool operator<=(const Mystring &rhs) const;
-
   bool operator>(const Mystring &rhs) const;
 
-  bool operator<(const Mystring &rhs) const;
+  // bool operator<(const Mystring &rhs) const;
 
   Mystring &operator=(const Mystring &rhs); // assignment operator
   // REQUIRES: rhs is reference to a Mystring as a source
   // PROMISES: to make this-object (object that this is pointing to, as  a copy
   //           of rhs.
-
-  Mystring operator+(const Mystring &rhs);
-
-  Mystring &operator+=(const Mystring &rhs);
 
   char &operator[](int index);
 
@@ -91,30 +79,6 @@ public:
   // PROMISES:copys s into charsM, if the length of s is less than or equal lengthM.
   //          Othrewise, extends the size of the charsM to s.lengthM+1, and copies
   //          s into the charsM.
-
-  int isGreaterThan(const Mystring &s) const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is greater than s.charsM.
-
-  int isGreaterOrEqual(const Mystring &s) const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is greater than or equal to s.charsM.
-
-  int isLessThan(const Mystring &s) const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is less than s.charsM.
-
-  int isLessOrEqual(const Mystring &s) const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is less than or equal to s.charsM.
-
-  int isEqual(const Mystring &s) const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM equal s.charsM.
-
-  int isNotEqual(const Mystring &s) const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is not equal s.charsM.
 
 private:
   int lengthM;  // the string length - number of characters excluding \0
