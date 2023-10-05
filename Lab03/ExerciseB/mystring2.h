@@ -17,7 +17,6 @@ class Mystring
 {
   friend ostream &operator<<(ostream &os, const Mystring &s);
   friend ostream &operator<<(ostream &os, Mystring &s);
-  // friend istream &operator>>(istream &is, Mystring &s);
 
 public:
   Mystring();
@@ -38,8 +37,6 @@ public:
   Mystring(const Mystring &source); // copy constructor
 
   bool operator>(const Mystring &rhs) const;
-
-  // bool operator<(const Mystring &rhs) const;
 
   Mystring &operator=(const Mystring &rhs); // assignment operator
   // REQUIRES: rhs is reference to a Mystring as a source
