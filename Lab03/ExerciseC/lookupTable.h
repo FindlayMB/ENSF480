@@ -26,6 +26,9 @@ typedef int LT_Key;
 typedef Customer LT_Datum;
 
 template <class Key, class Data>
+class LookupTable;
+
+template <class Key, class Data>
 struct Pair
 {
   Pair(Key keyA, Data datumA) : key(keyA), datum(datumA)
@@ -43,7 +46,7 @@ class LT_Node
 
 private:
   Pair<Key, Data> pairM;
-  LT_Node *nextM;
+  LT_Node<Key, Data> *nextM;
 
   // This ctor should be convenient in insert and copy operations.
   LT_Node(const Pair<Key, Data> &pairA, LT_Node *nextA);
@@ -134,7 +137,8 @@ public:
   void make_empty();
   // PROMISES: size() == 0.
 
-  friend ostream &operator<<(ostream &os, const LookupTable &lt);
+  template <class K, class D>
+  friend ostream &operator<<(ostream &os, const LookupTable<K, D> &lt);
 
 private:
   int sizeM;
@@ -225,7 +229,7 @@ void LookupTable<Key, Data>::insert(const Pair<Key, Data> &pairA)
   // Add new node at head?
   if (headM == 0 || pairA.key < headM->pairM.key)
   {
-    headM = new LT_Node(pairA, headM);
+    headM = new LT_Node<Key, Data>(pairA, headM);
     sizeM++;
   }
 
@@ -237,8 +241,8 @@ void LookupTable<Key, Data>::insert(const Pair<Key, Data> &pairA)
 
   else
   {
-    LT_Node *before = headM;
-    LT_Node *after = headM->nextM;
+    LT_Node<Key, Data> *before = headM;
+    LT_Node<Key, Data> *after = headM->nextM;
 
     while (after != NULL && (pairA.key > after->pairM.key))
     {
@@ -252,7 +256,7 @@ void LookupTable<Key, Data>::insert(const Pair<Key, Data> &pairA)
     }
     else
     {
-      before->nextM = new LT_Node(pairA, before->nextM);
+      before->nextM = new LT_Node<Key, Data>(pairA, before->nextM);
       sizeM++;
     }
   }
@@ -265,7 +269,7 @@ void LookupTable<Key, Data>::remove(const Key &keyA)
   if (headM == 0 || keyA < headM->pairM.key)
     return;
 
-  LT_Node *doomed_node = 0;
+  LT_Node<Key, Data> *doomed_node = 0;
   if (keyA == headM->pairM.key)
   {
     doomed_node = headM;
@@ -274,8 +278,8 @@ void LookupTable<Key, Data>::remove(const Key &keyA)
   }
   else
   {
-    LT_Node *before = headM;
-    LT_Node *maybe_doomed = headM->nextM;
+    LT_Node<Key, Data> *before = headM;
+    LT_Node<Key, Data> *maybe_doomed = headM->nextM;
     while (maybe_doomed != 0 && keyA > maybe_doomed->pairM.key)
     {
       before = maybe_doomed;
@@ -295,7 +299,7 @@ void LookupTable<Key, Data>::remove(const Key &keyA)
 template <class Key, class Data>
 void LookupTable<Key, Data>::find(const Key &keyA)
 {
-  LT_Node *ptr = headM;
+  LT_Node<Key, Data> *ptr = headM;
   while (ptr != NULL && ptr->pairM.key != keyA)
   {
     ptr = ptr->nextM;
@@ -329,7 +333,7 @@ template <class Key, class Data>
 void LookupTable<Key, Data>::destroy()
 {
 
-  LT_Node *ptr = headM;
+  LT_Node<Key, Data> *ptr = headM;
   while (ptr != NULL)
   {
     headM = headM->nextM;
@@ -350,7 +354,7 @@ void LookupTable<Key, Data>::copy(const LookupTable &source)
   if (source.headM == 0)
     return;
 
-  for (LT_Node *p = source.headM; p != 0; p = p->nextM)
+  for (LT_Node<Key, Data> *p = source.headM; p != 0; p = p->nextM)
   {
     insert(Pair<Key, Data>(p->pairM.key, p->pairM.datum));
     if (source.cursorM == p)
@@ -362,13 +366,18 @@ template <class Key, class Data>
 ostream &operator<<(ostream &os, const LookupTable<Key, Data> &lt)
 {
   if (lt.cursor_ok())
+  {
     os << lt.cursor_key() << "  " << lt.cursor_datum();
+  }
   else
+  {
     os << "Not Found.";
+  }
 
   return os;
 }
 
+// Iterator functions
 template <class Key, class Data>
 const Data &LookupTable<Key, Data>::Iterator::operator*()
 {
@@ -380,7 +389,7 @@ template <class Key, class Data>
 const Data &LookupTable<Key, Data>::Iterator::operator++()
 {
   assert(LT->cursor_ok());
-  const data &x = LT->cursor_datum();
+  const Data &x = LT->cursor_datum();
   LT->step_fwd();
   return x;
 }

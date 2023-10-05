@@ -15,9 +15,6 @@ using namespace std;
 
 class Mystring
 {
-  friend ostream &operator<<(ostream &os, const Mystring &s);
-  friend ostream &operator<<(ostream &os, Mystring &s);
-  friend istream &operator>>(istream &is, Mystring &s);
 
 public:
   Mystring();
@@ -115,6 +112,10 @@ public:
   int isNotEqual(const Mystring &s) const;
   // REQUIRES: s refers to an object of class Mystring
   // PROMISES: retruns true if charsM is not equal s.charsM.
+
+  friend ostream &operator<<(ostream &os, const Mystring &s);
+  friend ostream &operator<<(ostream &os, Mystring &s);
+  friend istream &operator>>(istream &is, Mystring &s);
 
 private:
   int lengthM;  // the string length - number of characters excluding \0
