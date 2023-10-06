@@ -162,6 +162,7 @@ void test_String()
   // Pretend that a user is trying to look up customers info.
 
   // Test find
+
   cout << "\nLet's look up some names ...\n";
   try_to_find(lt, 8001);
   try_to_find(lt, 8000);
