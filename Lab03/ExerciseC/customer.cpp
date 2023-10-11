@@ -3,7 +3,7 @@
  * Assignment: Lab 3 Exercise C
  * Lab Section: B02
  * Completed by: Findlay Brown, Nimna Wijedasa
- * Submission Date: Oct 2, 2023
+ * Submission Date: Oct 11, 2023
  */
 #include "customer.h"
 #include <iostream>
@@ -60,7 +60,7 @@ void Customer::setPhone(const char *s)
 
 ostream &operator<<(ostream &os, const Customer &c)
 {
-  os << "Nmae: " << c.getFname();
+  os << "Name: " << c.getFname();
   os << " " << c.getLname();
   os << ". Address: " << c.getAddress();
   os << ". Phone:: " << c.getPhone();

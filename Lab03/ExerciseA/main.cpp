@@ -3,7 +3,7 @@
  * Assignment: Lab 3 Exercise A
  * Lab Section: B02
  * Completed by: Findlay Brown, Nimna Wijedasa
- * Submission Date: Oct 2, 2023
+ * Submission Date: Oct 11, 2023
  */
 
 #include "graphicsWorld.h"
