@@ -143,7 +143,7 @@ public:
   // PROMISES: size() == 0.
 
   template <class K, class D>
-  friend ostream &operator<<(ostream &os, const LookupTable<K, D> &lt);
+  friend ostream &operator<<(ostream &os, const LookupTable<Key, Data> &lt);
 
 private:
   int sizeM;
@@ -368,7 +368,7 @@ void LookupTable<Key, Data>::copy(const LookupTable &source)
 }
 
 template <class Key, class Data>
-ostream &operator<<(ostream &os, const LookupTable<Key, Data> &lt)
+ostream &operator<< <Key, Data>(ostream &os, const LookupTable<Key, Data> &lt)
 {
   if (lt.cursor_ok())
   {

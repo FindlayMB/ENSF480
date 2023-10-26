@@ -116,12 +116,13 @@ Mystring Mystring::operator+(const Mystring &rhs)
 Mystring &Mystring::operator+=(const Mystring &rhs)
 {
   this->lengthM += rhs.length();
-  char *temp = new char[this->lengthM + 1];
-  assert(temp != nullptr);
-  strcpy(temp, charsM);
-  strcat(temp, rhs.charsM);
-  delete[] charsM;
-  charsM = temp;
+  char *temp = this->charsM; // new char[this->lengthM + 1];
+  this->charsM = new char[this->lengthM + 1];
+  assert(this->charsM != nullptr);
+  strcpy(this->charsM, temp);
+  strcat(this->charsM, rhs.charsM);
+  delete[] temp;
+  // charsM = temp;
   return *this;
 }
 

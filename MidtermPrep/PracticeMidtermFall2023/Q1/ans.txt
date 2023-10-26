@@ -1,0 +1,43 @@
+ctor for x[0] 
+ctor for x[1]
+copy ctor for b = x[1]
+ctor z
+op= a=b
+dtor z
+dtor b
+dtor x[0]
+dtor x[1]
+
+
+A is a child of B
+B is a child of C
+C is a child of D
+
+
+if ~B ~C ~D are not virtual
+B* p = new A
+delete p
+~B ~C ~D
+
+if ~B virtual
+B* p = new A
+delete p
+~A ~B ~C ~D
+
+~D
+~C ~D
+~B ~C ~D
+~A ~B ~C ~D
+
+
+A
+B
+C
+
+
+B *p = new C
+delete p
+~A ~B
+
+
+

@@ -1,0 +1,29 @@
+Part a)
+
+list[0];
+list[2] = 1000;
+
+template <class T>
+T &List<T>::operator[](int index)
+{
+    if (headM == nullptr || index < 0)
+    {
+        cout << "Something went wrong: Out of Bound Error" << endl;
+        return rtnval;
+    }
+    Node<T> *tmp = headM;
+    int currentIndex = 0;
+    while (tmp != nullptr)
+    {
+        if (currentIndex == index)
+        {
+            return tmp->item;
+        }
+        currentIndex++;
+        tmp = tmp->next;
+    }
+    cout << "Something went wrong: Out of Bound Error" << endl;
+    return rtnval;
+}
+
+Part b)

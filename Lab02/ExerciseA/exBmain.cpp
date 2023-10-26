@@ -23,13 +23,19 @@ void test_operator_overloading(DictionaryList &dl);
 
 int main()
 {
-    DictionaryList dl = dictionary_tests();
+    // DictionaryList dl = dictionary_tests();
 
     //   test_copying();
 
     // Uncomment the call to test_copying when DictionaryList::copy is properly defined
     // test_finding(dl);
-    test_operator_overloading(dl);
+    // test_operator_overloading(dl);
+
+    Mystring s1("Hello");
+    Mystring s2(" World");
+    s1 += s2;
+
+    cout << s1 << endl;
 
     return 0;
 }

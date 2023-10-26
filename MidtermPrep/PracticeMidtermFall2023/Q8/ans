@@ -1,0 +1,14 @@
+
+
+Bank has many ATMS
+Banks 1 -> 0..* ATM
+
+Bank has many Customers
+Banks 1 -> 0..* Customer
+
+Bank
+
+ATM
+
+Customer
+

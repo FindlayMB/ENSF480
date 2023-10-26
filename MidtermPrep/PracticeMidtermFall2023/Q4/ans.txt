@@ -1,0 +1,4 @@
+
+function	can access
+funC: 		a1, a2, c1, c2, c3, d1, d2, d3
+funD:		c1, c2, d1, d2, d3

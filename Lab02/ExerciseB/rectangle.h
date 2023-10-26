@@ -24,7 +24,7 @@ public:
     Rectangle(const Rectangle &source);
     Rectangle &operator=(const Rectangle &rhs);
 
-    double getSideB() const;
+        double getSideB() const;
     void setSideB(double side_b);
     void display() const;
     double area() const;
