@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-
 /**
- * MyVector clas
+ * MyVector class
  * <p>ENSF 480 - Lab 5 Exercise A and B
+ * <p>MyVector.java
  * @author  Findlay Brown
  * @version 1.0
  * @since   27-10-2023

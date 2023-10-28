@@ -2,6 +2,7 @@ import java.util.ArrayList;
 /**
  * Bubble Sorter class
  * <p>ENSF 480 - Lab 5 Exercise A and B
+ * <p>BubbleSorter.java
  * @author  Findlay Brown
  * @version 1.0
  * @since   27-10-2023

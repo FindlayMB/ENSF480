@@ -2,6 +2,7 @@ import java.util.ArrayList;
 /**
  * Insertion Sorter class
  * <p>ENSF 480 - Lab 5 Exercise A and B
+ * <p>InsertionSort.java
  * @author  Findlay Brown
  * @version 1.0
  * @since   27-10-2023
@@ -16,10 +17,6 @@ public class InsertionSorter<E extends Number & Comparable<E>> implements Sorter
                 index--;
             }
             arr.set(index+1, keyItem);
-
-        }
-        
+        }   
     }
-
-
 }

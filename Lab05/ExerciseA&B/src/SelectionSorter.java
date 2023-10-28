@@ -2,11 +2,12 @@ import java.util.ArrayList;
 /**
  * Selection Sorter class
  * <p>ENSF 480 - Lab 5 Exercise A and B
+ * <p>SelectionSorter.java
  * @author  Findlay Brown
  * @version 1.0
  * @since   27-10-2023
  */
-public class SelectionSort<E extends Number & Comparable<E>> implements Sorter<E> {
+public class SelectionSorter<E extends Number & Comparable<E>> implements Sorter<E> {
     public void sort(ArrayList<Item<E>> arr){
         int swapIndex = 0;
         for(int i = 0; i < arr.size()-1; i++){
@@ -18,6 +19,5 @@ public class SelectionSort<E extends Number & Comparable<E>> implements Sorter<E
             }
             swap(arr,swapIndex,minIndex); 
         }
-
     }
 }

@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * Main file that runs and tests MyVector and sorting classes
+ * <p>ENSF 480 - Lab 5 Exercise A and B
+ * <p>DemoStrategyPattern.java
+ * @author  Findlay Brown
+ * @version 1.0
+ * @since   27-10-2023
+ */
 public class DemoStrategyPattern {
 	public static void main(String[] args) {
 		// Create an object of MyVector<Double> with capacity of 50 elements
@@ -61,7 +68,7 @@ public class DemoStrategyPattern {
 		System.out.println("---- TEST SELECTION SORT ----");
 		System.out.println("\nThe original values in v3 object are:");
 		v3.display();
-		v3.setSortStrategy(new SelectionSort<Integer>());;
+		v3.setSortStrategy(new SelectionSorter<Integer>());;
 		v3.performSort();
 		System.out.println("\nThe values in MyVector object v3 after performing SelectionSorter is:");
 		v3.display();

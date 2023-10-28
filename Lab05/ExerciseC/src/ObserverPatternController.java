@@ -1,4 +1,11 @@
-
+/**
+ * Main file that runs and tests code following the observer design pattern
+ * <p>ENSF 480 - Lab 5 Exercise C
+ * <p>ObserverPatternController.java
+ * @author  Findlay Brown
+ * @version 1.0
+ * @since   27-10-2023
+ */
 public class ObserverPatternController {
  	public static void main(String []s) {
 		double [] arr = {10, 20, 33, 44, 50, 30, 60, 70, 80, 10, 11, 23, 34, 55};
