@@ -6,8 +6,11 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Stroke;
-
-
+/**
+ * ENSF 480 Lab 6 Exercise B
+ * @author Findlay Brown
+ * File: ColouredGlassDecorator.java
+ */
 public class ColouredGlassDecorator extends Decorator{
     public ColouredGlassDecorator(Component cmp, int x, int y, int width, int height){
         super(cmp,x,y,width,height);

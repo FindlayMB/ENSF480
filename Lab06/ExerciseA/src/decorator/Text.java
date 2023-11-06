@@ -1,8 +1,11 @@
 package decorator;
-
 import java.awt.Color;
 import java.awt.Graphics;
-
+/**
+ * ENSF 480 Lab 6 Exercise A
+ * @author Findlay Brown
+ * File: Text.java
+ */
 public class Text implements Component{
     
     int x;

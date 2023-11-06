@@ -2,9 +2,12 @@ import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 import decorator.*;
-
+/**
+ * ENSF 480 Lab 6 Exercise A & B
+ * @author Findlay Brown
+ * File: DemoDecoratorPattern.java
+ */
 public class DemoDecoratorPattern extends JPanel {
 	Component t;
 	

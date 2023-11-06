@@ -1,7 +1,11 @@
 package decorator;
 import java.awt.Dimension;
 import java.awt.Point;
-
+/**
+ * ENSF 480 Lab 6 Exercise A
+ * @author Findlay Brown
+ * File: Decorator.java
+ */
 public abstract class Decorator implements Component{
     Component cmp;
     int x;

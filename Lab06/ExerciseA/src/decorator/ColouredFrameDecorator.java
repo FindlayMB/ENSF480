@@ -5,7 +5,11 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Stroke;
-
+/**
+ * ENSF 480 Lab 6 Exercise A
+ * @author Findlay Brown
+ * File: ColouredFrameDecorator.java
+ */
 public class ColouredFrameDecorator extends Decorator{
     private int thickness;
 
@@ -13,6 +17,8 @@ public class ColouredFrameDecorator extends Decorator{
         super(cmp,x,y,width,height);
         this.thickness = thickness;
     }
+
+    @Override
     public void draw(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
         Color oldColor = g2.getColor();

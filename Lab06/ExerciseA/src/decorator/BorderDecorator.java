@@ -4,10 +4,14 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Stroke;
-
+/**
+ * ENSF 480 Lab 6 Exercise A
+ * @author Findlay Brown
+ * File: BorderDecorator.java
+ */
 public class BorderDecorator extends Decorator{
     final static BasicStroke dashed = new BasicStroke(1.0f,BasicStroke.CAP_BUTT, 
-    BasicStroke.JOIN_BEVEL, 10.0f, new float[]{9.0f}, 0.0f);
+            BasicStroke.JOIN_BEVEL, 10.0f, new float[]{9.0f}, 0.0f);
 
     public BorderDecorator(Component cmp, int x, int y, int width, int height){
         super(cmp,x,y,width,height);
